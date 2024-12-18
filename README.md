@@ -21,8 +21,6 @@
   - [Frontend Setup (Next.js)](#frontend-setup-nextjs)
   - [Combined Run](#combined-run)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -138,25 +136,3 @@ Once both the backend and frontend servers are running, you can access Serenova 
 - Access **Relaxation Techniques** to help reduce stress and maintain balance.
 
 ---
-
-## 🤝 Contributing
-
-We welcome contributions to Serenova! To contribute:
-
-- Fork the repository
-- Create your feature branch (`git checkout -b feature-name`)
-- Commit your changes (`git commit -am 'Add new feature'`)
-- Push to the branch (`git push origin feature-name`)
-- Create a new Pull Request
-
-You can also raise issues or suggest improvements via GitHub Issues.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
-
----
-
-Thank you for using **Serenova**! 🌿
