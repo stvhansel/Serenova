@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  font-family:"Plus Jakarta Sans", sans-serif; 
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* KALENDER */
+.fc-toolbar {
+  font-size: 12px; 
+}
+
+.fc-toolbar-title {
+  font-weight: bold; 
+  color: #02055A;
+}
+
+.fc-daygrid {
+
+  font-size: 12px;
+  color: #969696;
+}
+
+.fc-timegrid {
+  background-color: white; 
+  font-size: 12px;
+  color: #969696;
+}
+
+.fc-prev-button:hover, .fc-next-button:hover {
+  background-color: rgba(0, 0, 0, 0.05); 
+}
+
+.fc .fc-day-today {
+  background-color: #00B4BE !important;
+  color: white; 
+}
+
+.fc-prev-button:focus, .fc-next-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.fc .fc-toolbar {
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.fc {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1em;
+
+  &,
+  & *,
+  & *:before,
+  & *:after {
+    box-sizing: border-box;
+  }
+
+  & table {
+    border-spacing: 0;
+    font-size: 1em;
+    border-radius: 8px;
+    background-color: white; 
+    overflow: hidden;
+  }
+
+  & th {
+    text-align: left;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 8px;
+  }
+
+  & th,
+  & td {
+    vertical-align: top;
+    padding: 0;
+  }
+
+  & a[data-navlink] {
+    cursor: pointer;
+  }
+
+  & a[data-navlink]:hover {
+    text-decoration: underline;
+  }
+}
+
+.fc-direction-ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.fc-direction-rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.fc-theme-standard {
+  & td,
+  & th {
+    border:1px solid var(--fc-border-color);
+    overflow: hidden;
+  }
+}
+
+.fc-liquid-hack {
+
+  & td,
+  & th {
+    position: relative;
+  }
+
+}
+
+.fc-toolbar .fc-button {
+  background-color: #02055A !important;
+  color: white !important;
+  border: none !important;
+}
+
+.fc-toolbar .fc-button:focus {
+  outline: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* SCROLLBAR HIDE RELAS MENU */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+/* VOLUME RELAX */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #02055A; 
+  cursor: pointer;
+}
+
+/* ANIMATION LANDING PAGE */
+
+.animate-fade-in {
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-out {
+  animation: fade-out 0.5s forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fade-in-and-float {
+  animation: fadeIn 1s ease-in-out forwards, floating 6s ease-in-out 1s infinite; 
+}
+
+/* styles/globals.css or your existing CSS file */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at original position */
+        opacity: 1;
+    }
+}
+
+.animate-slide-in-right {
+    animation: slideInFromRight 0.5s ease-out forwards; /* Adjust duration and easing as needed */
+}
+
+/* Add to your CSS file if not using Tailwind */
+.transition-transform {
+  transition: transform 0.7s ease-in-out;
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}
+
+.translate-x-0 {
+  transform: translateX(0);
+}
+
